@@ -125,7 +125,18 @@ public class EnterNumberActivity extends Activity {
 		
 		
 	}
-	
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		getWindow().clearFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+	}
 	
 	
 

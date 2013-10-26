@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".NewTimerActivity" >
+
+    <LinearLayout
+        android:id="@+id/timecontrols"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_new_timer_time_control_height"
+                android:text="+" 
+                android:onClick="onClickPlusHour"  />
+
+            <TextView
+                android:id="@+id/hours"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_new_timer_time_control_height"
+                android:gravity="center" 
+                style="@style/activity_new_timer_time_controls_text" 
+                android:clickable="true"
+                android:onClick="onClickHours" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_new_timer_time_control_height"
+                android:onClick="onClickMinusHour" 
+                android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_new_timer_time_control_height"
+                android:onClick="onClickPlusMinute"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/minutes"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_new_timer_time_control_height"
+                android:gravity="center" 
+                style="@style/activity_new_timer_time_controls_text" 
+                android:clickable="true"
+                android:onClick="onClickMinutes" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_new_timer_time_control_height"
+                android:onClick="onClickMinusMinute"
+                android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_new_timer_time_control_height"
+                android:onClick="onClickPlusSecond"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/seconds"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_new_timer_time_control_height"
+                android:gravity="center" 
+                style="@style/activity_new_timer_time_controls_text"
+                android:clickable="true"
+                android:onClick="onClickSeconds"  />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_new_timer_time_control_height"
+                android:onClick="onClickMinusSecond"
+                android:text="-" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/button_icon"
+        android:layout_width="@dimen/activity_timer_button_icon_width"
+        android:layout_height="@dimen/activity_timer_button_icon_height"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/timecontrols"
+        android:clickable="true"
+        android:onClick="onClickIcon"
+        android:padding="@dimen/activity_new_timer_icon_button_padding" />
+      
+    <Button
+        android:layout_width="@dimen/activity_timer_button_add_width"
+        android:layout_height="@dimen/activity_new_timer_add_control_height"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/timecontrols"
+        android:text="Add"
+        android:onClick="onClickAddTimer" />
+
+</RelativeLayout>

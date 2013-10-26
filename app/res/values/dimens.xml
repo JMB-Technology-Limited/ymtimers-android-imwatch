@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">1dp</dimen>
+    <dimen name="activity_vertical_margin">1dp</dimen>
+    
+    <dimen name="activity_main_new_button_height">60dp</dimen>
+    
+    <dimen name="activity_new_timer_time_control_height">60dp</dimen>
+    <dimen name="activity_new_timer_add_control_height">60dp</dimen>
+    <dimen name="activity_new_timer_icon_button_padding">5dp</dimen>
+    <dimen name="activity_timer_button_icon_width">80dp</dimen>
+    <dimen name="activity_timer_button_icon_height">80dp</dimen>
+    <dimen name="activity_timer_button_add_width">180dp</dimen>
+    
+        
+    <dimen name="activity_timer_text_height">80dp</dimen>
+    <dimen name="activity_timer_button_height">80dp</dimen>
+    <dimen name="activity_timer_button_width">90dp</dimen>
+    
+    <dimen name="activity_main_time_icon_size">40dp</dimen>
+    <dimen name="activity_main_time_icon_margin_right">5dp</dimen>
+    
+    <dimen name="activity_timer_choose_icon_button_height">80dp</dimen>
+    <dimen name="activity_timer_choose_icon_button_width">100dp</dimen>
+    <dimen name="activity_timer_choose_icon_button_padding">5dp</dimen>
+    <dimen name="activity_timer_icon_button_padding">5dp</dimen>
+
+</resources>

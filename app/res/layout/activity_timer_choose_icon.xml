@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <TableRow >
+        
+        <ImageView 
+            android:layout_width="@dimen/activity_timer_choose_icon_button_width"
+            android:layout_height="@dimen/activity_timer_choose_icon_button_height"
+            android:src="@drawable/icon1"
+            android:clickable="true"
+            android:onClick="onClickIcon1"
+            android:padding="@dimen/activity_timer_choose_icon_button_padding"
+            />
+        
+        <ImageView 
+            android:layout_width="@dimen/activity_timer_choose_icon_button_width"
+            android:layout_height="@dimen/activity_timer_choose_icon_button_height"
+            android:src="@drawable/icon2"
+            android:clickable="true"
+            android:onClick="onClickIcon2"
+            android:padding="@dimen/activity_timer_choose_icon_button_padding"
+            />
+        
+        
+        <ImageView 
+            android:layout_width="@dimen/activity_timer_choose_icon_button_width"
+            android:layout_height="@dimen/activity_timer_choose_icon_button_height"
+            android:src="@drawable/icon3"
+            android:clickable="true"
+            android:onClick="onClickIcon3"
+            android:padding="@dimen/activity_timer_choose_icon_button_padding"
+            />
+    </TableRow>
+    
+    <TableRow >
+        
+        <ImageView 
+            android:layout_width="@dimen/activity_timer_choose_icon_button_width"
+            android:layout_height="@dimen/activity_timer_choose_icon_button_height"
+            android:src="@drawable/icon4"
+            android:clickable="true"
+            android:onClick="onClickIcon4"
+            android:padding="@dimen/activity_timer_choose_icon_button_padding"
+            />
+        
+        <ImageView 
+            android:layout_width="@dimen/activity_timer_choose_icon_button_width"
+            android:layout_height="@dimen/activity_timer_choose_icon_button_height"
+            android:src="@drawable/icon5"
+            android:clickable="true"
+            android:onClick="onClickIcon5"
+            android:padding="@dimen/activity_timer_choose_icon_button_padding"
+            />
+        
+        
+        <ImageView 
+            android:layout_width="@dimen/activity_timer_choose_icon_button_width"
+            android:layout_height="@dimen/activity_timer_choose_icon_button_height"
+            android:src="@drawable/icon6"
+            android:clickable="true"
+            android:onClick="onClickIcon6"
+            android:padding="@dimen/activity_timer_choose_icon_button_padding"
+            />
+    </TableRow>
+
+    <TableRow >
+        
+        <ImageView 
+            android:layout_width="@dimen/activity_timer_choose_icon_button_width"
+            android:layout_height="@dimen/activity_timer_choose_icon_button_height"
+            android:src="@drawable/icon7"
+            android:clickable="true"
+            android:onClick="onClickIcon7"
+            android:padding="@dimen/activity_timer_choose_icon_button_padding"
+            />
+        
+        <ImageView 
+            android:layout_width="@dimen/activity_timer_choose_icon_button_width"
+            android:layout_height="@dimen/activity_timer_choose_icon_button_height"
+            android:src="@drawable/icon8"
+            android:clickable="true"
+            android:onClick="onClickIcon8"
+            android:padding="@dimen/activity_timer_choose_icon_button_padding"
+            />
+        
+        
+        <ImageView 
+            android:layout_width="@dimen/activity_timer_choose_icon_button_width"
+            android:layout_height="@dimen/activity_timer_choose_icon_button_height"
+            android:src="@drawable/icon9"
+            android:clickable="true"
+            android:onClick="onClickIcon9"
+            android:padding="@dimen/activity_timer_choose_icon_button_padding"
+            />
+    </TableRow>
+</TableLayout>

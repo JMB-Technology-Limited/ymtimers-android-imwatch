@@ -40,6 +40,23 @@ public class TimeLeft {
 		return totalSeconds;
 	}
 
+	public boolean isPositive() {
+		return positive;
+	}
+
+	public int getHours() {
+		return hours;
+	}
+
+	public int getMinutes() {
+		return minutes;
+	}
+
+	public int getSeconds() {
+		return seconds;
+	}
+
+	
 	
 	
 }

@@ -25,6 +25,8 @@ public class OurApplication extends Application  {
 		super.onCreate();
 	}
 
+	//######################################### Alarm Timers
+	
 	protected List<Timer> timers = new ArrayList<Timer>();
 	private Object timersLock = new Object();
 	protected int nextTimerID = 1;
@@ -77,25 +79,47 @@ public class OurApplication extends Application  {
 		synchronized(timersLock) {
 			timers.remove(timer);
 		}
+		if (timers.size() == 0) {
+			stopAlarmService();
+		}
 	}
 	
+	//######################################### Alarm Service
+	// The Alarm Service runs every 15 seconds.
+	// For now it just plays a noise if any timers have expired, but it should also update a notification.
+	// When there are no timers left, it is stopped to save battery. 
+	
 	boolean alarmServiceStarted = false;
+	
+	protected Intent alarmServiceIntent;
+	protected PendingIntent alarmServicePendingIntent;
 	
 	public void startAlarmService() {
 		if (!alarmServiceStarted) {
 			Log.i("OurApplication","Starting Alarm Service");
 			// intent
-			Intent ii = new Intent(getApplicationContext(), AlarmService.class);
-			PendingIntent pi = PendingIntent.getService(getApplicationContext(), 2222, ii, PendingIntent.FLAG_CANCEL_CURRENT);
+			if (alarmServiceIntent == null || alarmServicePendingIntent == null) {
+				alarmServiceIntent = new Intent(getApplicationContext(), AlarmService.class);
+				alarmServicePendingIntent = PendingIntent.getService(getApplicationContext(), 2222, alarmServiceIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+			}
 			// time
 			Calendar cal = Calendar.getInstance();
 			cal.add(Calendar.SECOND, 15);
 			//registering our pending intent with alarmmanager
 			AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
-			am.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),15000, pi);
+			am.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),15000, alarmServicePendingIntent);
 			// started
 			alarmServiceStarted = true;
 		}
 	}
+	
+	public void stopAlarmService() {
+		if (alarmServiceStarted) {
+			AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+			am.cancel(alarmServicePendingIntent);
+			alarmServiceStarted = false;			
+		}
+	}
+	
 	
 }
